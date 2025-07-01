@@ -156,6 +156,24 @@ curl -X POST http://localhost:8080/estimate -H "Content-Type: application/json" 
 
 ---
 
+## Testing & Coverage
+
+- **Unit tests cover all core components:**
+  - Exchange providers (Binance, KuCoin, Uniswap, Raydium) with HTTP/gRPC mocks
+  - MarketDataService (aggregation, error handling, thread safety)
+  - Service layer (Estimate, GetRates)
+  - REST API handlers (Fiber)
+- **How to run all tests:**
+  - From the `golang` directory, run:
+    ```powershell
+    go test ./... -v
+    ```
+  - All tests should pass successfully (see example below):
+
+![Peanut.Trade tests](./screenshots/test.png)
+
+---
+
 ## Extending the Service
 
 - **Add a new exchange:**
