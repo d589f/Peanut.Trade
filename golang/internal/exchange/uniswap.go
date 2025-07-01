@@ -13,12 +13,11 @@ import (
 
 type UniswapProvider struct{}
 
+// ВСТАВИТЬ СВОЙ API
 var uniswapV3GraphUrl = "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"
 
-// Карта: пара -> адрес пула Uniswap V3
 var uniswapPools = map[string]string{
-	"ETH/USDC": "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8", // пример: ETH/USDC
-	// Добавить другие пары и их poolId по необходимости
+	//TODO
 }
 
 func (u *UniswapProvider) Name() string { return "Uniswap" }

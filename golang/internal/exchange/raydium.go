@@ -48,7 +48,7 @@ func (r *RaydiumProvider) StartYellowstone(ctx context.Context, yc *yellowstone.
 	// Подписка на Raydium SOL/USDT pool
 	req := &proto.SubscribeRequest{
 		Accounts: map[string]*proto.SubscribeRequestFilterAccounts{
-			"SOLUSDT": {Account: []string{"3nMFwZXwY1s1M5s8vYAHqd4wGs4iSxXE4LRoUMMYqEgF"}},
+			"SOLUSDT": {Account: []string{"3nMFwZXwY1s1M5s8vYAHqd4wGs4iSxXE4LRoUMMYqEgF"}}, // НЕ НАШЕЛ ПУЛЛ НА АУТСОРСЕ
 		},
 	}
 	go yc.SubscribeAndListen(ctx, req, func(update *proto.SubscribeUpdate) {
